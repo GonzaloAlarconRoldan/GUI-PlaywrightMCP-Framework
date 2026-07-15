@@ -1,0 +1,8 @@
+test_data:
+  valid_login:
+    username_button: "QUALITY ASSURANCE"
+    password_pin: "1234"
+  
+  invalid_login:
+    username_button: "QUALITY ASSURANCE"
+    password_pin: "${random_4_number_pin_except_1234}"

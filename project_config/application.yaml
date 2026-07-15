@@ -1,0 +1,10 @@
+application: 
+  name: ""
+
+  description: ""
+
+  login_url: ""
+
+  base_url: ""
+  
+  timezone: America/La_Paz

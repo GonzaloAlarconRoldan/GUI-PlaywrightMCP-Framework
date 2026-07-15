@@ -1,0 +1,13 @@
+reporting:
+  generate_pdf: true
+  generate_html: true
+  include_screenshots: true
+  include_metrics: true
+  include_console_errors: true
+  include_network_failures: false
+  include_test_data: true
+  include_execution_time: true
+  include_execution_summary: true
+  include_recomendations: true
+  report_language: "en"
+  screenshot_on_failure_only: false

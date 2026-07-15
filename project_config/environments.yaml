@@ -1,0 +1,8 @@
+environments:
+  iFrame:
+    description: "iFrame environment for testing purposes"
+    url: "https://iframe.example.com"
+  
+  production:
+    description: "Production environment for live application"
+    url: "https://www.appname.vysta.io/#/"
