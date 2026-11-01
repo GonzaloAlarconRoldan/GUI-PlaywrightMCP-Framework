@@ -1,16 +1,46 @@
 {
-  "name": "qa-ai-automation-framework",
+  "name": "gui-playwright-mcp-framework",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "AI QA agent template: Claude + Playwright MCP with persistent knowledge, one prompt per test job, and PDF reports.",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "npx playwright install chromium && node -e \"require('fs').existsSync('project_config/credentials.yaml')||require('fs').copyFileSync('project_config/credentials.example.yaml','project_config/credentials.yaml')\"",
+    "test": "playwright test -c playwright/playwright.config.ts",
+    "test:framework": "playwright test -c playwright/playwright.config.ts --project=framework",
+    "typecheck": "tsc --noEmit",
+    "report:pdf": "node generate_pdf.js",
+    "auth": "playwright codegen --save-storage=playwright/auth/admin.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "playwright",
+    "playwright-mcp",
+    "mcp",
+    "claude",
+    "claude-code",
+    "ai-testing",
+    "qa-automation",
+    "test-automation",
+    "exploratory-testing",
+    "regression-testing"
+  ],
+  "author": "Gonzalo Alarcón Roldán (https://github.com/GonzaloAlarconRoldan)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GonzaloAlarconRoldan/GUI-PlaywrightMCP-Framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GonzaloAlarconRoldan/GUI-PlaywrightMCP-Framework/issues"
+  },
+  "homepage": "https://github.com/GonzaloAlarconRoldan/GUI-PlaywrightMCP-Framework#readme",
+  "engines": {
+    "node": ">=20"
+  },
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.60.0"
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "yaml": "^2.9.1"
   }
 }

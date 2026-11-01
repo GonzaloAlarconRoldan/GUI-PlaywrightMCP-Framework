@@ -1,5 +1,6 @@
-# QA Agent Template
-### Claude + Playwright MCP Intelligent Testing Framework
+# Full Guide — QA Agent Template
+
+> Back to the [README](../README.md). This guide documents every config and knowledge file in detail.
 
 This template allows you to use Claude and Playwright MCP as an autonomous QA Engineer capable of:
 
@@ -99,20 +100,20 @@ qa-ai-automation-framework/
 
 **Priority 1 - Essential Configuration:**
 
-1. [project_config/application.yaml](project_config/application.yaml) - Application details
-2. [project_config/credentials.yaml](project_config/credentials.yaml) - Test user credentials
-3. [project_config/environments.yaml](project_config/environments.yaml) - Environment URLs
+1. [project_config/application.yaml](../project_config/application.yaml) - Application details
+2. [project_config/credentials.yaml](../project_config/credentials.example.yaml) - Test user credentials
+3. [project_config/environments.yaml](../project_config/environments.yaml) - Environment URLs
 
 **Priority 2 - Testing Configuration:**
 
-4. [project_config/test-data.yaml](project_config/test-data.yaml) - Reusable test data
-5. [project_config/reporting.yaml](project_config/reporting.yaml) - Report settings
-6. [knowledge/testing_scope.md](knowledge/testing_scope.md) - Define test scope
-7. [knowledge/known_issues.md](knowledge/known_issues.md) - Document existing bugs
+4. [project_config/test-data.yaml](../project_config/test-data.yaml) - Reusable test data
+5. [project_config/reporting.yaml](../project_config/reporting.yaml) - Report settings
+6. [knowledge/testing_scope.md](../knowledge/testing_scope.md) - Define test scope
+7. [knowledge/known_issues.md](../knowledge/known_issues.md) - Document existing bugs
 
 **Priority 3 - Authentication:**
 
-8. Generate [playwright/auth/admin.json](playwright/auth/admin.json) - After first successful login
+8. Generate [playwright/auth/admin.json](../playwright/auth/admin.json) - After first successful login
 
 ---
 
@@ -593,13 +594,13 @@ Example:
 ## Setup Checklist
 
 - [ ] Install NodeJS 20+ and Playwright
-- [ ] Complete [project_config/application.yaml](project_config/application.yaml)
-- [ ] Complete [project_config/credentials.yaml](project_config/credentials.yaml)
-- [ ] Complete [project_config/environments.yaml](project_config/environments.yaml)
-- [ ] Complete [project_config/test-data.yaml](project_config/test-data.yaml)
-- [ ] Complete [project_config/reporting.yaml](project_config/reporting.yaml)
-- [ ] Complete [knowledge/testing_scope.md](knowledge/testing_scope.md)
-- [ ] Complete [knowledge/known_issues.md](knowledge/known_issues.md)
+- [ ] Complete [project_config/application.yaml](../project_config/application.yaml)
+- [ ] Complete [project_config/credentials.yaml](../project_config/credentials.example.yaml)
+- [ ] Complete [project_config/environments.yaml](../project_config/environments.yaml)
+- [ ] Complete [project_config/test-data.yaml](../project_config/test-data.yaml)
+- [ ] Complete [project_config/reporting.yaml](../project_config/reporting.yaml)
+- [ ] Complete [knowledge/testing_scope.md](../knowledge/testing_scope.md)
+- [ ] Complete [knowledge/known_issues.md](../knowledge/known_issues.md)
 - [ ] Configure Playwright MCP in Claude Desktop or Claude Code
 - [ ] Load CLAUDE_SYSTEM_PROMPT.md into Claude context
 
@@ -979,15 +980,15 @@ Claude can compare current behavior against previous releases.
 
 ✓ Review baseline screenshots periodically
 
-✓ Keep [knowledge/known_issues.md](knowledge/known_issues.md) current - this prevents false positives
+✓ Keep [knowledge/known_issues.md](../knowledge/known_issues.md) current - this prevents false positives
 
-✓ Re-run [prompts/exploratory.md](prompts/exploratory.md) after major redesigns
+✓ Re-run [prompts/exploratory.md](../prompts/exploratory.md) after major redesigns
 
-✓ Use persistent authentication ([playwright/auth/admin.json](playwright/auth/admin.json))
+✓ Use persistent authentication ([playwright/auth/admin.json](../playwright/auth/admin.json))
 
 ✓ Store generated reports as release evidence
 
-✓ Treat [knowledge/](knowledge/) files as Claude's application memory
+✓ Treat [knowledge/](../knowledge/) files as Claude's application memory
 
 ---
 
@@ -997,14 +998,14 @@ Claude can compare current behavior against previous releases.
 
 | File | Purpose | Priority | Status |
 |------|---------|----------|--------|
-| [project_config/application.yaml](project_config/application.yaml) | Application details and URLs | P1 | TODO |
-| [project_config/credentials.yaml](project_config/credentials.yaml) | Test user credentials | P1 | TODO |
-| [project_config/environments.yaml](project_config/environments.yaml) | Environment URLs | P1 | TODO |
-| [project_config/test-data.yaml](project_config/test-data.yaml) | Reusable test data | P2 | TODO |
-| [project_config/reporting.yaml](project_config/reporting.yaml) | Report generation settings | P2 | TODO |
-| [knowledge/testing_scope.md](knowledge/testing_scope.md) | Define test scope and critical flows | P2 | TODO |
-| [knowledge/known_issues.md](knowledge/known_issues.md) | Document existing bugs | P2 | TODO |
-| [playwright/auth/admin.json](playwright/auth/admin.json) | Persistent login session | P3 | AUTO |
+| [project_config/application.yaml](../project_config/application.yaml) | Application details and URLs | P1 | TODO |
+| [project_config/credentials.yaml](../project_config/credentials.example.yaml) | Test user credentials | P1 | TODO |
+| [project_config/environments.yaml](../project_config/environments.yaml) | Environment URLs | P1 | TODO |
+| [project_config/test-data.yaml](../project_config/test-data.yaml) | Reusable test data | P2 | TODO |
+| [project_config/reporting.yaml](../project_config/reporting.yaml) | Report generation settings | P2 | TODO |
+| [knowledge/testing_scope.md](../knowledge/testing_scope.md) | Define test scope and critical flows | P2 | TODO |
+| [knowledge/known_issues.md](../knowledge/known_issues.md) | Document existing bugs | P2 | TODO |
+| [playwright/auth/admin.json](../playwright/auth/admin.json) | Persistent login session | P3 | AUTO |
 
 ---
 
@@ -1012,15 +1013,15 @@ Claude can compare current behavior against previous releases.
 
 | File | Purpose | Status |
 |------|---------|--------|
-| [CLAUDE_SYSTEM_PROMPT.md](CLAUDE_SYSTEM_PROMPT.md) | Claude system instructions | ✅ Ready |
-| [CLAUDE_CONTEXT.md](CLAUDE_CONTEXT.md) | Context loading instructions | ✅ Ready |
-| [CLAUDE_REPORTING.md](CLAUDE_REPORTING.md) | Reporting guidelines | ✅ Ready |
-| [prompts/exploratory.md](prompts/exploratory.md) | Exploratory testing prompt | ✅ Ready |
-| [prompts/smoke.md](prompts/smoke.md) | Smoke testing prompt | ✅ Ready |
-| [prompts/regression.md](prompts/regression.md) | Regression testing prompt | ✅ Ready |
-| [prompts/change_validation.md](prompts/change_validation.md) | Change validation prompt | ✅ Ready |
-| [prompts/generate_report.md](prompts/generate_report.md) | Report generation prompt | ✅ Ready |
-| [prompts/user_guide.md](prompts/user_guide.md) | Usage guide | ✅ Ready |
+| [CLAUDE_SYSTEM_PROMPT.md](../CLAUDE_SYSTEM_PROMPT.md) | Claude system instructions | ✅ Ready |
+| [CLAUDE_CONTEXT.md](../CLAUDE_CONTEXT.md) | Context loading instructions | ✅ Ready |
+| [CLAUDE_REPORTING.md](../CLAUDE_REPORTING.md) | Reporting guidelines | ✅ Ready |
+| [prompts/exploratory.md](../prompts/exploratory.md) | Exploratory testing prompt | ✅ Ready |
+| [prompts/smoke.md](../prompts/smoke.md) | Smoke testing prompt | ✅ Ready |
+| [prompts/regression.md](../prompts/regression.md) | Regression testing prompt | ✅ Ready |
+| [prompts/change_validation.md](../prompts/change_validation.md) | Change validation prompt | ✅ Ready |
+| [prompts/generate_report.md](../prompts/generate_report.md) | Report generation prompt | ✅ Ready |
+| [prompts/user_guide.md](../prompts/user_guide.md) | Usage guide | ✅ Ready |
 
 ---
 
@@ -1037,10 +1038,10 @@ Claude can compare current behavior against previous releases.
 
 ## Testing a New Release
 
-1. Update release notes in [knowledge/releases/](knowledge/releases/)
+1. Update release notes in [knowledge/releases/](../knowledge/releases/)
 2. Send to Claude: `Execute prompts/regression.md`
 3. Review generated report
-4. Update [knowledge/known_issues.md](knowledge/known_issues.md) if needed
+4. Update [knowledge/known_issues.md](../knowledge/known_issues.md) if needed
 
 ## Testing a Specific Change
 
@@ -1051,7 +1052,7 @@ Claude can compare current behavior against previous releases.
 ## Generating Reports
 
 1. Send to Claude: `Execute prompts/generate_report.md`
-2. Find PDF reports in [reports/generated/](reports/generated/)
+2. Find PDF reports in [reports/generated/](../reports/generated/)
 
 ---
 

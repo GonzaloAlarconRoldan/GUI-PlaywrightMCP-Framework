@@ -1,0 +1,35 @@
+name: 🐛 Bug report
+description: Something in the framework doesn't work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the prompt you ran (e.g. `prompts/smoke.md`) and what the agent did.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Configure project_config/...
+        2. Run `Execute prompts/...`
+        3. ...
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Claude Code 2.x · @playwright/mcp 0.x · Node 22 · macOS"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: ⚠️ Remove credentials, tokens and private URLs before pasting.

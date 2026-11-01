@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Secrets — never commit real credentials or session state
+project_config/credentials.yaml
+playwright/auth/*.json
+!playwright/auth/.gitkeep
+.env
+.env.*
+!.env.example
+
+# Generated artifacts (keep folder structure via .gitkeep)
+reports/generated/*
+!reports/generated/.gitkeep
+reports/evidence/*
+!reports/evidence/.gitkeep
+output/**/*
+!output/**/
+!output/**/.gitkeep
+screenshots/baseline/execution/**/*.png
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Local tooling / scratch
+brag-output/
+.DS_Store
+*.log
+.vscode/
+.idea/

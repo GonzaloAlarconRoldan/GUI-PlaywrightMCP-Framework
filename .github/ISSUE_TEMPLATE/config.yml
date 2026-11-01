@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & ideas
+    url: https://github.com/GonzaloAlarconRoldan/GUI-PlaywrightMCP-Framework/discussions
+    about: Ask how to adapt the framework to your app
